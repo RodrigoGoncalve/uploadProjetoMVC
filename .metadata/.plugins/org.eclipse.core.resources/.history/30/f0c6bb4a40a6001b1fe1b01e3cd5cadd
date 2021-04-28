@@ -1,0 +1,19 @@
+package br.com.rlsystem.login.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/home")
+public class LoginController {
+	
+	@RequestMapping("/login")
+	public String login() {
+		return "index";
+	}
+	@RequestMapping("/")
+	public String index() {
+		return "login";
+	}
+
+}

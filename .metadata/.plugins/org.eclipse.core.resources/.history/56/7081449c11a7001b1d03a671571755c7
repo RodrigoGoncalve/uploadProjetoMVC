@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Tasks List</title>
+</head>
+<body>
+	${tasks_lists[0].nome} - ${tasks_lists[0].data}
+	<br>
+	${tasks_lists[1].nome} - ${tasks_lists[1].data}
+</body>
+</html>

@@ -1,0 +1,5 @@
+package br.com.rlsystem.login.model;
+
+public class Todo {
+
+}

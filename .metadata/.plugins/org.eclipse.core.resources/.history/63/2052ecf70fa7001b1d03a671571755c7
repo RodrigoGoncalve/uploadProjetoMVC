@@ -1,0 +1,32 @@
+package br.com.rlsystem.tasks.services;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import br.com.rlsystem.tasks.model.Task;
+
+@Service
+public class TasksServices {
+	
+	private static List<Task>tasksList = new ArrayList<Task>();
+	
+	static {
+		tasksList.add(new Task(1, "limpar casa", new Date(), false));
+		tasksList.add(new Task(2, "Planejar viagem", new Date(), false));
+		tasksList.add(new Task(3, "Comprar novo computador", new Date(), false));
+		tasksList.add(new Task(4, "Resolver problemas banco", new Date(), true));
+	}
+	public List<Task> allTaskByStatus(boolean status){
+		List<Task> tasksListByStatus = new ArrayList<>();
+		for(Task task : tasksList) {
+			if (task.getStatus() == status) {
+				tasksListByStatus.add(task);
+			}
+		}
+		return tasksListByStatus;
+	}
+	 
+}
